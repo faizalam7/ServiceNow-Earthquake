@@ -2,10 +2,9 @@
 <database>
     <element label="Earthquake" max_length="40" name="x_26624_earthquake_earthquake" type="collection">
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Id" max_length="10" name="u_id" read_only="true" type="string"/>
-        <element label="Latitude" max_length="40" name="u_latitude" read_only="true" type="float"/>
-        <element label="Longitude" max_length="40" name="u_longitude" read_only="true" type="float"/>
-        <element label="Magnitude" max_length="15" name="u_magnitude" read_only="true" type="decimal"/>
-        <element label="Time" max_length="40" name="u_time" read_only="true" type="glide_date_time"/>
+        <element label="Latitude" max_length="40" name="u_latitude" type="float"/>
+        <element label="Longitude" max_length="40" name="u_longitude" type="float"/>
+        <element label="Magnitude" max_length="15" name="u_magnitude" type="decimal"/>
+        <element label="Time" max_length="40" name="u_time" type="glide_date_time"/>
     </element>
 </database>

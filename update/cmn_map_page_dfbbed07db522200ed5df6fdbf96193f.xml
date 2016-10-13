@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="cmn_map_page">
+    <cmn_map_page action="INSERT_OR_UPDATE">
+        <center_address>Yogododji, Africa</center_address>
+        <center_latitude/>
+        <center_longitude/>
+        <controls_size>large</controls_size>
+        <initial_zoom>2</initial_zoom>
+        <name>x_26624_earthquake_Overview</name>
+        <overview>false</overview>
+        <refresh_on_zoom>false</refresh_on_zoom>
+        <script><![CDATA[var gr = new GlideRecord('x_26624_earthquake_earthquake');
+gr.addEncodedQuery('u_timeONYesterday@javascript:gs.daysAgoStart(1)@javascript:gs.daysAgoEnd(1)');
+gr.query();
+
+gs.info(gr.getRowCount());
+while(gr.next()){
+	
+	// Plot each Requested for's location on a google map
+	var item = map.addItem(gr);
+	item.latitude = String(gr.u_latitude);
+	item.longitude = String(gr.u_longitude);
+	item.dialog_title = String(gr.u_id);
+	item.icon = 'http://maps.google.com/mapfiles/kml/paddle/' + Math.floor(gr.u_magnitude) + '.png';
+	item.icon_width = "32";
+	item.icon_height = "32";
+}
+
+
+]]></script>
+        <show_device_location>true</show_device_location>
+        <suffix>Overview</suffix>
+        <sys_class_name>cmn_map_page</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-10 21:49:29</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>dfbbed07db522200ed5df6fdbf96193f</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>x_26624_earthquake_Overview</sys_name>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>cmn_map_page_dfbbed07db522200ed5df6fdbf96193f</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-12 21:33:59</sys_updated_on>
+        <type>normal</type>
+        <type_selection>buttons</type_selection>
+    </cmn_map_page>
+</record_update>

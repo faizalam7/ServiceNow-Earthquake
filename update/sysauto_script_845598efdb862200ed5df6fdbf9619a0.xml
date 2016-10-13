@@ -11,7 +11,7 @@
         <run_dayofweek>1</run_dayofweek>
         <run_period/>
         <run_start>2016-09-29 18:28:58</run_start>
-        <run_time>1970-01-01 14:00:00</run_time>
+        <run_time>1970-01-01 03:00:00</run_time>
         <run_type>daily</run_type>
         <script><![CDATA[try {
 	var r = new sn_ws.RESTMessageV2('x_26624_earthquake.Get Daily Earthquakes', 'get');
@@ -50,15 +50,11 @@ function handleResponseBody(body) {
 	
 	var gr = new GlideRecord('x_26624_earthquake_earthquake');
 	for(var i = 0; i < obj.features.length; i++) {
-		var id = obj.features[i].id;
-		gs.info("id " + id);
-		if(gr.get('u_id', id)) { 
-			gs.info("found");
+		if(gr.get('number', obj.features[i].id)) { 
 			insertData(obj.features[i], gr); // update existing
 			gr.update();
 		}
 		else {
-			gs.info("not found");
 			gr.initialize();
 			insertData(obj.features[i], gr); // create new
 			gr.insert();
@@ -68,9 +64,9 @@ function handleResponseBody(body) {
 }
 
 function insertData(obj, gr) {
-	gr.u_id = obj.id;
+	gr.number = obj.id;
 	gr.u_magnitude = obj.properties.mag;
-	gr.u_time = obj.properties.time;
+	gr.u_time = msToGDT(obj.properties.time);
 	gr.u_longitude = obj.geometry.coordinates[0];
 	gr.u_latitude = obj.geometry.coordinates[1];
 }
@@ -80,13 +76,21 @@ function getYesterdayDate() {
 	gd.setValue(gs.daysAgoEnd(2));
 	
 	return gd.getValue();
+}
+
+function msToGDT(ms) {
+	var gdt = new GlideDateTime();
+	gdt.subtract(gdt.getNumericValue());// sets time to 0 
+	gdt.add(ms);
+	
+	return gdt;
 }]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>magnus</sys_created_by>
         <sys_created_on>2016-09-29 18:29:38</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>845598efdb862200ed5df6fdbf9619a0</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>Import Earthquakes</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy/>
@@ -94,7 +98,7 @@ function getYesterdayDate() {
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
         <sys_update_name>sysauto_script_845598efdb862200ed5df6fdbf9619a0</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
-        <sys_updated_on>2016-10-10 20:57:09</sys_updated_on>
+        <sys_updated_on>2016-10-12 21:35:54</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

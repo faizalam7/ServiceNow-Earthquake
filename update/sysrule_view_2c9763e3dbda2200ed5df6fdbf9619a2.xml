@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysrule_view">
+    <sysrule_view action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <condition/>
+        <description/>
+        <device_type>browser</device_type>
+        <match_conditions/>
+        <name>Earthquake User</name>
+        <order>100</order>
+        <overrides_user_preference>true</overrides_user_preference>
+        <script><![CDATA[(function overrideView(view, is_list) {
+
+	gs.info("is_list " + is_list);
+	gs.info("role " + gs.hasRole('x_26624_earthquake.user'));
+	if(gs.hasRole('x_26624_earthquake.user') && !gs.hasRole('x_26624_earthquake.admin'))
+		answer = 'eq_user';
+
+})(view, is_list);]]></script>
+        <sys_class_name>sysrule_view</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-12 20:06:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2c9763e3dbda2200ed5df6fdbf9619a2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Earthquake User</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>sysrule_view_2c9763e3dbda2200ed5df6fdbf9619a2</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-12 20:48:05</sys_updated_on>
+        <table>x_26624_earthquake_earthquake</table>
+        <view>EQ User</view>
+    </sysrule_view>
+</record_update>

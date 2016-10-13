@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <element>u_magnitude</element>
+        <name>x_26624_earthquake_earthquake</name>
+        <style>background-color:Tomato;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-12 21:14:37</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2de7732bdbda2200ed5df6fdbf9619f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_26624_earthquake_earthquake</sys_name>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>sys_ui_style_2de7732bdbda2200ed5df6fdbf9619f5</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-12 21:14:37</sys_updated_on>
+        <value>javascript: current.u_magnitude &gt;= 8 &amp;&amp; current.u_magnitude &lt; 9</value>
+    </sys_ui_style>
+</record_update>
