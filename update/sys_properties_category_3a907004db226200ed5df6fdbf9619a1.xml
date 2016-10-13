@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Earthquake Application</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-13 20:01:47</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3a907004db226200ed5df6fdbf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Earthquake Application</sys_name>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>sys_properties_category_3a907004db226200ed5df6fdbf9619a1</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-13 20:01:47</sys_updated_on>
+        <title><![CDATA[<p><font size="5">Please set the properties.</font></p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=3a907004db226200ed5df6fdbf9619a1"/>
+</record_update>
