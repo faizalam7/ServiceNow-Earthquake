@@ -2,29 +2,30 @@
 <record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>At what magnitude should notifications start being sent?</description>
+        <description>The maximum magnitude to look for. &#13;
+This can be a decimal value.</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
-        <name>x_26624_earthquake.magnitude.notify</name>
+        <name>x_26624_earthquake.magnitude.maximum</name>
         <read_roles>x_26624_earthquake.admin</read_roles>
-        <suffix>magnitude.notify</suffix>
+        <suffix>magnitude.maximum</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>magnus</sys_created_by>
-        <sys_created_on>2016-10-13 20:05:05</sys_created_on>
+        <sys_created_on>2016-10-13 21:59:11</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
-        <sys_id>2891b4ccdbae2200ed5df6fdbf9619f7</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>x_26624_earthquake.magnitude.notify</sys_name>
+        <sys_id>40bb05c8db226200ed5df6fdbf9619f7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_26624_earthquake.magnitude.maximum</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
-        <sys_update_name>sys_properties_2891b4ccdbae2200ed5df6fdbf9619f7</sys_update_name>
+        <sys_update_name>sys_properties_40bb05c8db226200ed5df6fdbf9619f7</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
-        <sys_updated_on>2016-10-13 22:02:56</sys_updated_on>
+        <sys_updated_on>2016-10-13 22:05:18</sys_updated_on>
         <type>string</type>
-        <value>5.3</value>
+        <value/>
         <write_roles>x_26624_earthquake.admin</write_roles>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=2891b4ccdbae2200ed5df6fdbf9619f7"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=40bb05c8db226200ed5df6fdbf9619f7"/>
 </record_update>

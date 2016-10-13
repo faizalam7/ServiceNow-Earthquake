@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description>Sends an email if the earthquake is over a set limit</description>
+        <event_name>x_26624_earthquake.magnitude.over.limit</event_name>
+        <fired_by>Business Rule: Notify if Over Limit</fired_by>
+        <queue/>
+        <suffix>magnitude.over.limit</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-13 21:48:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7ae8c1c8db226200ed5df6fdbf961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_26624_earthquake.magnitude.over.limit</sys_name>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>sysevent_register_7ae8c1c8db226200ed5df6fdbf961953</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-13 21:48:26</sys_updated_on>
+        <table>x_26624_earthquake_earthquake</table>
+    </sysevent_register>
+</record_update>

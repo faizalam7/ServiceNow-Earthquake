@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_26624_earthquake_earthquake" version="2" view="rpt-tempx_26624_earthquake_earthquakemagnus">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>2f040d48db226200ed5df6fdbf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_magnitude</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>af040d48db226200ed5df6fdbf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_longitude</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>23040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_latitude</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>a3040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_time</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>27040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_mod_count</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>a7040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>2b040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_26624_earthquake_earthquake" element="NULL" name="x_26624_earthquake_earthquake" parent="NULL" relationship="NULL" sys_domain="global" view="63040d48db226200ed5df6fdbf9619ea">e7040d48db226200ed5df6fdbf9619ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_id>ab040d48db226200ed5df6fdbf9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_26624_earthquake_earthquake</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-13 21:25:50</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e7040d48db226200ed5df6fdbf9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package/>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-13 21:25:50</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rpt-tempx_26624_earthquake_earthquakemagnus" name="rpt-tempx_26624_earthquake_earthquakemagnus">63040d48db226200ed5df6fdbf9619ea</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
