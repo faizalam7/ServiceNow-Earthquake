@@ -9,91 +9,28 @@
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
-        <run_period/>
+        <run_period>1970-01-01 00:30:00</run_period>
         <run_start>2016-09-29 18:28:58</run_start>
         <run_time>1970-01-01 03:00:00</run_time>
-        <run_type>daily</run_type>
-        <script><![CDATA[try {
-	var minMag = gs.getProperty('x_26624_earthquake.magnitude.minimum', 3.0);
-	var maxMag = gs.getProperty('x_26624_earthquake.magnitude.maximum');
-	
-	var r = new sn_ws.RESTMessageV2('x_26624_earthquake.Get Daily Earthquakes', 'get');
-	r.setStringParameter('format', 'geojson');
-	r.setStringParameter('yesterday', getYesterdayDate());
-	r.setStringParameter('minmag', minMag);
-	r.setStringParameter('maxmag', maxMag);
-	
-	var response = r.execute();
-	var responseBody = response.getBody();
-	var httpStatus = response.getStatusCode();
-	
-	try {
-		handleResponseBody(responseBody);
-	}
-	catch(err) {
-		throw "Problem updating table data. " + err;
-	}
+        <run_type>periodically</run_type>
+        <script><![CDATA[gs.info("Scheduled Jobs: Import Earthquakes starting");
+
+var errCtr = 0;
+try {
+	new Earthquake().saveNewest();
 }
-catch(ex) {
-	var message = ex.getMessage();
-	gs.warn("Problem getting earthquake data: {0}", message);
+catch(err) {
+	gs.error("There was a problem getting earthquake data from scheduled job. {0}", err);
+	errCtr++;
 }
 
-function handleResponseBody(body) {
-	var obj;
-	try {
-		obj = new global.JSON().decode(body);
-	}
-	catch(decodeErr) {
-		throw "Problem parsing response body to JSON format. " + decodeErr;
-	}
-	
-	if(obj.features.length < 1)
-		throw "No earthquake data to handle";
-	
-	var gr = new GlideRecord('x_26624_earthquake_earthquake');
-	for(var i = 0; i < obj.features.length; i++) {
-		if(gr.get('number', obj.features[i].id)) {
-			insertData(obj.features[i], gr); // update existing
-			gr.update();
-		}
-		else {
-			gr.initialize();
-			insertData(obj.features[i], gr); // create new
-			gr.insert();
-		}
-	}
-	
-}
-
-function insertData(obj, gr) {
-	gr.number = obj.id;
-	gr.u_magnitude = obj.properties.mag;
-	gr.u_time = msToGDT(obj.properties.time);
-	gr.u_longitude = obj.geometry.coordinates[0];
-	gr.u_latitude = obj.geometry.coordinates[1];
-}
-
-function getYesterdayDate() {
-	var gd = new GlideDate();
-	gd.setValue(gs.daysAgoEnd(2));
-	
-	return gd.getValue();
-}
-
-function msToGDT(ms) {
-	var gdt = new GlideDateTime();
-	gdt.subtract(gdt.getNumericValue());// sets time to 0
-	gdt.add(ms);
-	
-	return gdt;
-}]]></script>
+errCtr == 0 ? gs.info("Scheduled Jobs: Import Earthquakes finished") : gs.warn("Scheduled Jobs: Import Earthquakes finished with {0} errors", errCtr); ]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>magnus</sys_created_by>
         <sys_created_on>2016-09-29 18:29:38</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>845598efdb862200ed5df6fdbf9619a0</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name>Import Earthquakes</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy/>
@@ -101,7 +38,7 @@ function msToGDT(ms) {
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
         <sys_update_name>sysauto_script_845598efdb862200ed5df6fdbf9619a0</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
-        <sys_updated_on>2016-10-13 21:21:59</sys_updated_on>
+        <sys_updated_on>2016-10-14 22:01:49</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

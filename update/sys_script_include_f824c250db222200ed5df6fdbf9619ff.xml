@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_26624_earthquake.Earthquake</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Earthquake</name>
+        <script><![CDATA[var Earthquake = Class.create();
+Earthquake.prototype = {
+	initialize: function() {
+		this.eqTableName = gs.getCurrentScopeName() + '_earthquake';
+		
+		this.minMag = gs.getProperty(this.eqTableName + '.magnitude.minimum', 3.0);
+		this.maxMag = gs.getProperty(this.eqTableName + '.magnitude.maximum');
+		
+		this.restMsg = gs.getCurrentScopeName() + '.Get Daily Earthquakes';
+	},
+	
+	saveNewest: function() {
+		try {
+			var body = this._getRESTBody();			
+			var obj = new global.JSON().decode(body);
+			
+			if(obj.features.length < 1)
+				throw "No earthquake data to handle";
+			
+			var gr = new GlideRecord(this.eqTableName);
+			for(var i = 0; i < obj.features.length; i++) {
+				if(gr.get('number', obj.features[i].id)) {
+					this._insertData(obj.features[i], gr); // update existing
+					gr.update();
+				}
+				else {
+					gr.initialize();
+					this._insertData(obj.features[i], gr); // create new
+					gr.insert();
+				}
+			}
+		}
+		catch(err) {
+			throw "There was a problem getting earthquake data. " + err;
+		}
+		
+	},
+	
+	_getRESTBody: function(body) {
+		try {
+			var r = new sn_ws.RESTMessageV2(this.restMsg, 'get');
+			r.setStringParameter('format', 'geojson');
+			r.setStringParameter('yesterday', this._getYesterdayDate());
+			r.setStringParameter('minmag', this.minMag);
+			if(this.maxMag)
+				r.setStringParameter('maxmag', this.maxMag);
+			
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			
+			if(httpStatus == 200)
+				return responseBody;
+			
+			throw "Got response httpStatus = " + httpStatus;
+		}
+		catch(err) {
+			throw err;
+		}
+		
+		return;
+	},
+	
+	_insertData: function(obj, gr) {
+		gr.number = obj.id;
+		gr.u_magnitude = obj.properties.mag;
+		gr.u_time = this._msToGDT(obj.properties.time);
+		gr.u_longitude = obj.geometry.coordinates[0];
+		gr.u_latitude = obj.geometry.coordinates[1];
+	},
+	
+	_getYesterdayDate: function() {
+		var gd = new GlideDate();
+		gd.setValue(gs.daysAgoEnd(2));
+		
+		return gd.getValue();
+	},
+	
+	_msToGDT: function(ms) {
+		var gdt = new GlideDateTime();
+		gdt.subtract(gdt.getNumericValue()); // sets time to 0
+		gdt.add(ms);
+		
+		return gdt;
+	},
+	
+	type: 'Earthquake'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>magnus</sys_created_by>
+        <sys_created_on>2016-10-14 20:51:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f824c250db222200ed5df6fdbf9619ff</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Earthquake</sys_name>
+        <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
+        <sys_update_name>sys_script_include_f824c250db222200ed5df6fdbf9619ff</sys_update_name>
+        <sys_updated_by>magnus</sys_updated_by>
+        <sys_updated_on>2016-10-14 22:02:56</sys_updated_on>
+    </sys_script_include>
+</record_update>
