@@ -5,6 +5,8 @@
         <element label="Latitude" max_length="40" name="u_latitude" type="float"/>
         <element label="Longitude" max_length="40" name="u_longitude" type="float"/>
         <element label="Magnitude" max_length="15" name="u_magnitude" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Place" max_length="40" name="u_place" type="string"/>
         <element label="Time" max_length="40" name="u_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="40" name="u_title" type="string"/>
     </element>
 </database>

@@ -5,7 +5,7 @@
         <active>true</active>
         <api_name>x_26624_earthquake.Earthquake</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Imports ans saves new earthquake data.</description>
         <name>Earthquake</name>
         <script><![CDATA[var Earthquake = Class.create();
 Earthquake.prototype = {
@@ -18,26 +18,32 @@ Earthquake.prototype = {
 		this.restMsg = gs.getCurrentScopeName() + '.Get Daily Earthquakes';
 	},
 	
-	saveNewest: function() {
+	saveFrom: function(lastUpdateGDT) {
+		var startUTC = this._getLastUpdateTime();
+		
+		if(!startUTC)
+			throw "No startTime to use for API query.";
+		
 		try {
-			var body = this._getRESTBody();			
+			var body = this._getRESTBody(startUTC);			
 			var obj = new global.JSON().decode(body);
 			
-			if(obj.features.length < 1)
-				throw "No earthquake data to handle";
-			
-			var gr = new GlideRecord(this.eqTableName);
-			for(var i = 0; i < obj.features.length; i++) {
-				if(gr.get('number', obj.features[i].id)) {
-					this._insertData(obj.features[i], gr); // update existing
-					gr.update();
-				}
-				else {
-					gr.initialize();
-					this._insertData(obj.features[i], gr); // create new
-					gr.insert();
+			if(obj.features) {
+				var gr = new GlideRecord(this.eqTableName);
+				for(var i = 0; i < obj.features.length; i++) {
+					if(gr.get('number', obj.features[i].id)) {
+						this._insertData(obj.features[i], gr); // update existing
+						gr.update();
+					}
+					else {
+						gr.initialize();
+						this._insertData(obj.features[i], gr); // create new
+						gr.insert();
+					}
 				}
 			}
+			else
+				gs.log("No new earthquake data to handle");
 		}
 		catch(err) {
 			throw "There was a problem getting earthquake data. " + err;
@@ -45,12 +51,12 @@ Earthquake.prototype = {
 		
 	},
 	
-	_getRESTBody: function(body) {
+	_getRESTBody: function(startTime) {
 		try {
 			var r = new sn_ws.RESTMessageV2(this.restMsg, 'get');
 			r.setStringParameter('format', 'geojson');
-			r.setStringParameter('yesterday', this._getYesterdayDate());
 			r.setStringParameter('minmag', this.minMag);
+			r.setStringParameter('starttime', startTime);
 			if(this.maxMag)
 				r.setStringParameter('maxmag', this.maxMag);
 			
@@ -61,7 +67,7 @@ Earthquake.prototype = {
 			if(httpStatus == 200)
 				return responseBody;
 			
-			throw "Got response httpStatus = " + httpStatus;
+			throw "Got response httpStatus = " + httpStatus + " with request body = " + r.getRequestBody();
 		}
 		catch(err) {
 			throw err;
@@ -70,27 +76,25 @@ Earthquake.prototype = {
 		return;
 	},
 	
+	_getLastUpdateTime: function() {
+		var gr = new GlideRecord(this.eqTableName);
+		gr.orderByDesc('u_time');
+		gr.setLimit(1);
+		gr.query();
+		
+		var th = new TimeHelper();
+		
+		return gr.next() ? th.localGDTtoUTC(gr.u_time) : th.getYesterdayDate();
+	},
+	
 	_insertData: function(obj, gr) {
 		gr.number = obj.id;
+		gr.u_title = obj.properties.title;
+		gr.u_place = obj.properties.place;
 		gr.u_magnitude = obj.properties.mag;
-		gr.u_time = this._msToGDT(obj.properties.time);
 		gr.u_longitude = obj.geometry.coordinates[0];
 		gr.u_latitude = obj.geometry.coordinates[1];
-	},
-	
-	_getYesterdayDate: function() {
-		var gd = new GlideDate();
-		gd.setValue(gs.daysAgoEnd(2));
-		
-		return gd.getValue();
-	},
-	
-	_msToGDT: function(ms) {
-		var gdt = new GlideDateTime();
-		gdt.subtract(gdt.getNumericValue()); // sets time to 0
-		gdt.add(ms);
-		
-		return gdt;
+		gr.u_time = new TimeHelper().msToGDT(obj.properties.time);
 	},
 	
 	type: 'Earthquake'
@@ -100,7 +104,7 @@ Earthquake.prototype = {
         <sys_created_on>2016-10-14 20:51:58</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>f824c250db222200ed5df6fdbf9619ff</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Earthquake</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy>read</sys_policy>
@@ -108,6 +112,6 @@ Earthquake.prototype = {
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
         <sys_update_name>sys_script_include_f824c250db222200ed5df6fdbf9619ff</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
-        <sys_updated_on>2016-10-14 22:02:56</sys_updated_on>
+        <sys_updated_on>2016-10-15 22:26:17</sys_updated_on>
     </sys_script_include>
 </record_update>

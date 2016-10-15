@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_rest_message_fn_param_defs">
     <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
-        <name>maxmagnitude</name>
-        <order>300</order>
+        <name>updatedafter</name>
+        <order>500</order>
         <rest_message_function display_value="get">7ff0d06fdb862200ed5df6fdbf9619c0</rest_message_function>
         <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
         <sys_created_by>magnus</sys_created_by>
-        <sys_created_on>2016-10-13 21:16:36</sys_created_on>
+        <sys_created_on>2016-10-15 18:34:23</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
-        <sys_id>1cc14d84db226200ed5df6fdbf961934</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>maxmagnitude</sys_name>
+        <sys_id>539caa64dbe22200ed5df6fdbf961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>updatedafter</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
-        <sys_update_name>sys_rest_message_fn_param_defs_1cc14d84db226200ed5df6fdbf961934</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_param_defs_539caa64dbe22200ed5df6fdbf961941</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
         <sys_updated_on>2016-10-15 18:34:23</sys_updated_on>
-        <value>${maxmag}</value>
+        <value>${starttime}</value>
     </sys_rest_message_fn_param_defs>
 </record_update>

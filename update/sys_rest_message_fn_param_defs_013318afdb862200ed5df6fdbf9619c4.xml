@@ -2,14 +2,14 @@
 <record_update table="sys_rest_message_fn_param_defs">
     <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
         <name>minmagnitude</name>
-        <order>300</order>
+        <order>200</order>
         <rest_message_function display_value="get">7ff0d06fdb862200ed5df6fdbf9619c0</rest_message_function>
         <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
         <sys_created_by>magnus</sys_created_by>
         <sys_created_on>2016-09-29 18:20:19</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>013318afdb862200ed5df6fdbf9619c4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>minmagnitude</sys_name>
         <sys_package display_value="Earthquake" source="x_26624_earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_package>
         <sys_policy/>
@@ -17,7 +17,7 @@
         <sys_scope display_value="Earthquake">af6340abdb862200ed5df6fdbf9619dd</sys_scope>
         <sys_update_name>sys_rest_message_fn_param_defs_013318afdb862200ed5df6fdbf9619c4</sys_update_name>
         <sys_updated_by>magnus</sys_updated_by>
-        <sys_updated_on>2016-09-30 21:28:17</sys_updated_on>
+        <sys_updated_on>2016-10-15 18:34:23</sys_updated_on>
         <value>${minmag}</value>
     </sys_rest_message_fn_param_defs>
 </record_update>

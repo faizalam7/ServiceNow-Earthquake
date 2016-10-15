@@ -4,11 +4,11 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>a3727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>99c12fe4db662200ed5df6fdbf961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <text/>
             <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
         </sys_ui_annotation>
@@ -16,153 +16,181 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>27727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>1dc12fe4db662200ed5df6fdbf961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>a3727fa7dbda2200ed5df6fdbf961959</element>
+            <element>u_title</element>
             <position>1</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>a7727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>9dc12fe4db662200ed5df6fdbf961919</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>99c12fe4db662200ed5df6fdbf961919</element>
+            <position>2</position>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>11c12fe4db662200ed5df6fdbf96191a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>2b727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>91c12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_magnitude</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>ab727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>15c12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>2f727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>95c12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_time</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>af727fa7dbda2200ed5df6fdbf961959</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>19c12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>23727fa7dbda2200ed5df6fdbf96195a</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>99c12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>a3727fa7dbda2200ed5df6fdbf96195a</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>1dc12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_longitude</element>
-            <position>8</position>
+            <element>u_place</element>
+            <position>9</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>27727fa7dbda2200ed5df6fdbf96195a</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>9dc12fe4db662200ed5df6fdbf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>a7727fa7dbda2200ed5df6fdbf96195a</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>11c12fe4db662200ed5df6fdbf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_latitude</element>
-            <position>10</position>
+            <element>u_longitude</element>
+            <position>11</position>
             <sys_created_by>magnus</sys_created_by>
-            <sys_created_on>2016-10-12 20:51:00</sys_created_on>
-            <sys_id>2b727fa7dbda2200ed5df6fdbf96195a</sys_id>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>91c12fe4db662200ed5df6fdbf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
             <sys_updated_by>magnus</sys_updated_by>
-            <sys_updated_on>2016-10-12 20:51:00</sys_updated_on>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_latitude</element>
+            <position>12</position>
+            <sys_created_by>magnus</sys_created_by>
+            <sys_created_on>2016-10-15 22:11:52</sys_created_on>
+            <sys_id>15c12fe4db662200ed5df6fdbf96191b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26624_earthquake_earthquake" sys_domain="global" view="Default view">5531dd83db122200ed5df6fdbf961981</sys_ui_section>
+            <sys_updated_by>magnus</sys_updated_by>
+            <sys_updated_on>2016-10-15 22:11:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
